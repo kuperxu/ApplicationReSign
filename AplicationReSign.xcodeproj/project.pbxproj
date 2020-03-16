@@ -14,6 +14,7 @@
 		93255CE1241FCCB8000E23AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE0241FCCB8000E23AD /* Assets.xcassets */; };
 		93255CE4241FCCB8000E23AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE2241FCCB8000E23AD /* LaunchScreen.storyboard */; };
 		93255CE7241FCCB8000E23AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CE6241FCCB8000E23AD /* main.m */; };
+		93255CEE241FCD5F000E23AD /* coderesign.sh in Resources */ = {isa = PBXBuildFile; fileRef = 93255CED241FCD5F000E23AD /* coderesign.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		93255CE3241FCCB8000E23AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93255CE5241FCCB8000E23AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93255CE6241FCCB8000E23AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93255CED241FCD5F000E23AD /* coderesign.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = coderesign.sh; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				93255CD8241FCCB4000E23AD /* SceneDelegate.m */,
 				93255CDA241FCCB4000E23AD /* ViewController.h */,
 				93255CDB241FCCB4000E23AD /* ViewController.m */,
+				93255CED241FCD5F000E23AD /* coderesign.sh */,
 				93255CDD241FCCB4000E23AD /* Main.storyboard */,
 				93255CE0241FCCB8000E23AD /* Assets.xcassets */,
 				93255CE2241FCCB8000E23AD /* LaunchScreen.storyboard */,
@@ -86,6 +89,7 @@
 				93255CCD241FCCB4000E23AD /* Sources */,
 				93255CCE241FCCB4000E23AD /* Frameworks */,
 				93255CCF241FCCB4000E23AD /* Resources */,
+				93255CEF241FCD6D000E23AD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -134,12 +138,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				93255CE4241FCCB8000E23AD /* LaunchScreen.storyboard in Resources */,
+				93255CEE241FCD5F000E23AD /* coderesign.sh in Resources */,
 				93255CE1241FCCB8000E23AD /* Assets.xcassets in Resources */,
 				93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93255CEF241FCD6D000E23AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh ${PROJECT_DIR}/coderesign.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93255CCD241FCCB4000E23AD /* Sources */ = {
@@ -296,7 +321,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tencent.AplicationReSign;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,7 +338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tencent.AplicationReSign;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
