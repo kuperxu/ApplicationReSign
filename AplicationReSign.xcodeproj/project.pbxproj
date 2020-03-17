@@ -8,21 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* AppDelegate.m */; };
-		93255CD9241FCCB4000E23AD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD8241FCCB4000E23AD /* SceneDelegate.m */; };
 		93255CDC241FCCB4000E23AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* ViewController.m */; };
 		93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CDD241FCCB4000E23AD /* Main.storyboard */; };
 		93255CE1241FCCB8000E23AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE0241FCCB8000E23AD /* Assets.xcassets */; };
 		93255CE4241FCCB8000E23AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE2241FCCB8000E23AD /* LaunchScreen.storyboard */; };
 		93255CE7241FCCB8000E23AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CE6241FCCB8000E23AD /* main.m */; };
-		93255CEE241FCD5F000E23AD /* coderesign.sh in Resources */ = {isa = PBXBuildFile; fileRef = 93255CED241FCD5F000E23AD /* coderesign.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93255CD1241FCCB4000E23AD /* AplicationReSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationReSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93255CD4241FCCB4000E23AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93255CD5241FCCB4000E23AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93255CD7241FCCB4000E23AD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		93255CD8241FCCB4000E23AD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		93255CDA241FCCB4000E23AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		93255CDB241FCCB4000E23AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		93255CDE241FCCB4000E23AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,8 +61,6 @@
 			children = (
 				93255CD4241FCCB4000E23AD /* AppDelegate.h */,
 				93255CD5241FCCB4000E23AD /* AppDelegate.m */,
-				93255CD7241FCCB4000E23AD /* SceneDelegate.h */,
-				93255CD8241FCCB4000E23AD /* SceneDelegate.m */,
 				93255CDA241FCCB4000E23AD /* ViewController.h */,
 				93255CDB241FCCB4000E23AD /* ViewController.m */,
 				93255CED241FCD5F000E23AD /* coderesign.sh */,
@@ -138,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93255CE4241FCCB8000E23AD /* LaunchScreen.storyboard in Resources */,
-				93255CEE241FCD5F000E23AD /* coderesign.sh in Resources */,
 				93255CE1241FCCB8000E23AD /* Assets.xcassets in Resources */,
 				93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */,
 			);
@@ -162,7 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh ${PROJECT_DIR}/coderesign.sh\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#sh ${PROJECT_DIR}/coderesign.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -174,7 +167,6 @@
 				93255CDC241FCCB4000E23AD /* ViewController.m in Sources */,
 				93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */,
 				93255CE7241FCCB8000E23AD /* main.m in Sources */,
-				93255CD9241FCCB4000E23AD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -302,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
