@@ -1,3 +1,6 @@
+#echo $env   all verable.
+#EXECUTABLE_NAME 可执行变量名
+
 #${SRCROOT} 工程目录
 TEMP_PATH="${SRCROOT}/Temp"
 #资源文件夹，我们提前在工程目录下新建一个APP文件夹，里面放ipa包
@@ -80,3 +83,4 @@ do
 #rm -rf "${SRCROOT}/Temp"
 done
 fi
+
