@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; };
+		8C9264692421090500D10782 /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* AppDelegate.m */; };
 		93255CDC241FCCB4000E23AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* ViewController.m */; };
 		93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CDD241FCCB4000E23AD /* Main.storyboard */; };
@@ -15,7 +17,23 @@
 		93255CE7241FCCB8000E23AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CE6241FCCB8000E23AD /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C92646A2421090600D10782 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C9264692421090500D10782 /* FridaGadget.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8C92645C2420FBAE00D10782 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
+		8C9264672421036200D10782 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = AplicationReSign/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
 		93255CD1241FCCB4000E23AD /* AplicationReSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationReSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93255CD4241FCCB4000E23AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93255CD5241FCCB4000E23AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,17 +52,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C9264622420FD9600D10782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C9264672421036200D10782 /* FridaGadget.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93255CC8241FCCB4000E23AD = {
 			isa = PBXGroup;
 			children = (
 				93255CD3241FCCB4000E23AD /* AplicationReSign */,
 				93255CD2241FCCB4000E23AD /* Products */,
+				8C9264622420FD9600D10782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +91,7 @@
 				93255CD5241FCCB4000E23AD /* AppDelegate.m */,
 				93255CDA241FCCB4000E23AD /* ViewController.h */,
 				93255CDB241FCCB4000E23AD /* ViewController.m */,
+				8C92645C2420FBAE00D10782 /* Frameworks */,
 				93255CED241FCD5F000E23AD /* coderesign.sh */,
 				93255CDD241FCCB4000E23AD /* Main.storyboard */,
 				93255CE0241FCCB8000E23AD /* Assets.xcassets */,
@@ -84,6 +113,7 @@
 				93255CCE241FCCB4000E23AD /* Frameworks */,
 				93255CCF241FCCB4000E23AD /* Resources */,
 				93255CEF241FCD6D000E23AD /* ShellScript */,
+				8C92646A2421090600D10782 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -155,7 +185,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#sh ${PROJECT_DIR}/coderesign.sh\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#sh ${PROJECT_DIR}/coderesign.sh\necho **********************************\necho $env\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -242,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -308,10 +338,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29C6E7CDHA;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AplicationReSign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AplicationReSign",
+					"$(PROJECT_DIR)/AplicationReSign/Framework",
+					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -325,10 +362,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29C6E7CDHA;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AplicationReSign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AplicationReSign",
+					"$(PROJECT_DIR)/AplicationReSign/Framework",
+					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
