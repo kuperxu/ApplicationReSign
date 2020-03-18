@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8C1D83BE242210C100AFC76D /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */; };
 		8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; };
 		93255CD6241FCCB4000E23AD /* FakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */; };
 		93255CDC241FCCB4000E23AD /* FakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* FakeViewController.m */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		8C1D839C242201C600AFC76D /* FakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeAppDelegate.h; sourceTree = "<group>"; };
+		8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		8C1D83BD242210C100AFC76D /* AplicationReSign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AplicationReSign.entitlements; sourceTree = "<group>"; };
 		8C92645C2420FBAE00D10782 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		8C9264672421036200D10782 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = AplicationReSign/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
 		93255CD1241FCCB4000E23AD /* AplicationReSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationReSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1D83BE242210C100AFC76D /* ExternalAccessory.framework in Frameworks */,
 				8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +66,7 @@
 		8C9264622420FD9600D10782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */,
 				8C9264672421036200D10782 /* FridaGadget.dylib */,
 			);
 			name = Frameworks;
@@ -87,6 +92,7 @@
 		93255CD3241FCCB4000E23AD /* AplicationReSign */ = {
 			isa = PBXGroup;
 			children = (
+				8C1D83BD242210C100AFC76D /* AplicationReSign.entitlements */,
 				8C1D839C242201C600AFC76D /* FakeAppDelegate.h */,
 				93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */,
 				93255CDA241FCCB4000E23AD /* FakeViewController.h */,
@@ -336,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AplicationReSign/AplicationReSign.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29C6E7CDHA;
 				ENABLE_BITCODE = NO;
@@ -347,7 +354,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AplicationReSign",
-					"$(PROJECT_DIR)/AplicationReSign/Framework",
 					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
@@ -360,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AplicationReSign/AplicationReSign.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29C6E7CDHA;
 				ENABLE_BITCODE = NO;
@@ -371,7 +378,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AplicationReSign",
-					"$(PROJECT_DIR)/AplicationReSign/Framework",
 					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
