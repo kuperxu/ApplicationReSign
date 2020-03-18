@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; };
-		93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* AppDelegate.m */; };
-		93255CDC241FCCB4000E23AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* ViewController.m */; };
+		93255CD6241FCCB4000E23AD /* FakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */; };
+		93255CDC241FCCB4000E23AD /* FakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* FakeViewController.m */; };
 		93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CDD241FCCB4000E23AD /* Main.storyboard */; };
 		93255CE1241FCCB8000E23AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE0241FCCB8000E23AD /* Assets.xcassets */; };
 		93255CE4241FCCB8000E23AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CE2241FCCB8000E23AD /* LaunchScreen.storyboard */; };
@@ -32,13 +32,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C1D839C242201C600AFC76D /* FakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeAppDelegate.h; sourceTree = "<group>"; };
 		8C92645C2420FBAE00D10782 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		8C9264672421036200D10782 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = AplicationReSign/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
 		93255CD1241FCCB4000E23AD /* AplicationReSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationReSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93255CD4241FCCB4000E23AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		93255CD5241FCCB4000E23AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93255CDA241FCCB4000E23AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93255CDB241FCCB4000E23AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeAppDelegate.m; sourceTree = "<group>"; };
+		93255CDA241FCCB4000E23AD /* FakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeViewController.h; sourceTree = "<group>"; };
+		93255CDB241FCCB4000E23AD /* FakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeViewController.m; sourceTree = "<group>"; };
 		93255CDE241FCCB4000E23AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93255CE0241FCCB8000E23AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93255CE3241FCCB8000E23AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 		93255CD3241FCCB4000E23AD /* AplicationReSign */ = {
 			isa = PBXGroup;
 			children = (
-				93255CD4241FCCB4000E23AD /* AppDelegate.h */,
-				93255CD5241FCCB4000E23AD /* AppDelegate.m */,
-				93255CDA241FCCB4000E23AD /* ViewController.h */,
-				93255CDB241FCCB4000E23AD /* ViewController.m */,
+				8C1D839C242201C600AFC76D /* FakeAppDelegate.h */,
+				93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */,
+				93255CDA241FCCB4000E23AD /* FakeViewController.h */,
+				93255CDB241FCCB4000E23AD /* FakeViewController.m */,
 				8C92645C2420FBAE00D10782 /* Frameworks */,
 				93255CED241FCD5F000E23AD /* coderesign.sh */,
 				93255CDD241FCCB4000E23AD /* Main.storyboard */,
@@ -194,8 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93255CDC241FCCB4000E23AD /* ViewController.m in Sources */,
-				93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */,
+				93255CDC241FCCB4000E23AD /* FakeViewController.m in Sources */,
+				93255CD6241FCCB4000E23AD /* FakeAppDelegate.m in Sources */,
 				93255CE7241FCCB8000E23AD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

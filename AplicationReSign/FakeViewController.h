@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  AplicationReSign
 //
 //  Created by 徐纪光 on 2020/3/16.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface FakeViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
 
 @end
 

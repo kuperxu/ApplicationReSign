@@ -6,13 +6,13 @@
 //  Copyright © 2020 kuperxu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FakeViewController.h"
 
-@interface ViewController ()
+@interface FakeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FakeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,13 +6,13 @@
 //  Copyright © 2020 kuperxu. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "FakeAppDelegate.h"
 
-@interface AppDelegate ()
+@interface FakeAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation FakeAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
