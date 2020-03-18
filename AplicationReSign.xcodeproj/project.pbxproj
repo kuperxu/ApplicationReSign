@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; };
-		8C9264692421090500D10782 /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		93255CD6241FCCB4000E23AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* AppDelegate.m */; };
 		93255CDC241FCCB4000E23AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* ViewController.m */; };
 		93255CDF241FCCB4000E23AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93255CDD241FCCB4000E23AD /* Main.storyboard */; };
@@ -18,13 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8C92646A2421090600D10782 /* Embed Libraries */ = {
+		8C1D839B2421FDED00AFC76D /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8C9264692421090500D10782 /* FridaGadget.dylib in Embed Libraries */,
+				8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,7 +113,7 @@
 				93255CCE241FCCB4000E23AD /* Frameworks */,
 				93255CCF241FCCB4000E23AD /* Resources */,
 				93255CEF241FCD6D000E23AD /* ShellScript */,
-				8C92646A2421090600D10782 /* Embed Libraries */,
+				8C1D839B2421FDED00AFC76D /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -272,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -324,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
