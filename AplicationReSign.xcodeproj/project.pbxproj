@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		8C1D83BE242210C100AFC76D /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */; };
 		8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9264672421036200D10782 /* FridaGadget.dylib */; };
 		93255CD6241FCCB4000E23AD /* FakeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */; };
 		93255CDC241FCCB4000E23AD /* FakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CDB241FCCB4000E23AD /* FakeViewController.m */; };
@@ -18,24 +16,8 @@
 		93255CE7241FCCB8000E23AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93255CE6241FCCB8000E23AD /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8C1D839B2421FDED00AFC76D /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8C1D839A2421FDED00AFC76D /* FridaGadget.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		8C1D839C242201C600AFC76D /* FakeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeAppDelegate.h; sourceTree = "<group>"; };
-		8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
-		8C1D83BD242210C100AFC76D /* AplicationReSign.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AplicationReSign.entitlements; sourceTree = "<group>"; };
 		8C92645C2420FBAE00D10782 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Frameworks; sourceTree = "<group>"; };
 		8C9264672421036200D10782 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = FridaGadget.dylib; path = AplicationReSign/Frameworks/FridaGadget.dylib; sourceTree = "<group>"; };
 		93255CD1241FCCB4000E23AD /* AplicationReSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AplicationReSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +37,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C1D83BE242210C100AFC76D /* ExternalAccessory.framework in Frameworks */,
 				8C9264682421036200D10782 /* FridaGadget.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +47,6 @@
 		8C9264622420FD9600D10782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C1D83BB242210A400AFC76D /* ExternalAccessory.framework */,
 				8C9264672421036200D10782 /* FridaGadget.dylib */,
 			);
 			name = Frameworks;
@@ -92,7 +72,6 @@
 		93255CD3241FCCB4000E23AD /* AplicationReSign */ = {
 			isa = PBXGroup;
 			children = (
-				8C1D83BD242210C100AFC76D /* AplicationReSign.entitlements */,
 				8C1D839C242201C600AFC76D /* FakeAppDelegate.h */,
 				93255CD5241FCCB4000E23AD /* FakeAppDelegate.m */,
 				93255CDA241FCCB4000E23AD /* FakeViewController.h */,
@@ -119,7 +98,6 @@
 				93255CCE241FCCB4000E23AD /* Frameworks */,
 				93255CCF241FCCB4000E23AD /* Resources */,
 				93255CEF241FCD6D000E23AD /* ShellScript */,
-				8C1D839B2421FDED00AFC76D /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -350,13 +328,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AplicationReSign",
 					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ApplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,13 +353,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AplicationReSign",
 					"$(PROJECT_DIR)/AplicationReSign/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.AplicationReSign;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.ApplicationReSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

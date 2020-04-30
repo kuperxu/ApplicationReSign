@@ -3,10 +3,16 @@
 
 #${SRCROOT} 工程目录
 TEMP_PATH="${SRCROOT}/Temp"
-#资源文件夹，我们提前在工程目录下新建一个APP文件夹，里面放ipa包
-ASSETS_PATH="${SRCROOT}/BreakJailAPP"
+#工程目录-存放ipa包
+ASSETS_PATH="${SRCROOT}/DumpAppFiles"
+#工程目录-存放dsym
+DSYM_PATH="${SRCROOT}/DumpAppSymbol"
+#uuid cache directory
+DSYM_UUID_ROOT_PATH="~/Library/SymbolCache/dsyms/uuids"
 #目标ipa包路径
 TARGET_IPA_PATH="${ASSETS_PATH}/*.ipa"
+#目标dSYM路径
+TARGET_DSYM_PATH="${DSYM_PATH}/*.dsym"
 #自定义 FridaGadget.dylib 注入库
 FRIDA_PATH="/Users/kuperxu/Documents/reverse_engine/Frida/FridaGadget.dylib"
 
@@ -49,16 +55,16 @@ APP_BINARY=`plutil -convert xml1 -o - $TARGET_APP_PATH/Info.plist|grep -A1 Exec|
 #上可执行权限
 chmod +x "$TARGET_APP_PATH/$APP_BINARY"
 
-#----------------------------------------
-# 6. 使用optool 注入Frida
-# Frida打包入APP，FRIDA_PATH修改为本地Frida路径 - Frida 需要自定义
-# 这里要注意这里的签名不能和工程里面的 Embedded 相冲突。
-# 如果把FridaGadget设置成了embed&sign那么这里copy&sign就不需要做了。但是还是要有注入这一步。
-mkdir -p "$TARGET_APP_PATH/Frameworks"
-TARGET_FRIDA_PATH="$TARGET_APP_PATH/Frameworks/FridaGadget.dylib"
-cp "$FRIDA_PATH" "$TARGET_FRIDA_PATH"
-optool install -c load -p "@executable_path/Frameworks/FridaGadget.dylib" -t "$TARGET_APP_PATH/$APP_BINARY"
-echo $executable_path
+##----------------------------------------
+## 6. 使用optool 注入Frida
+## Frida打包入APP，FRIDA_PATH修改为本地Frida路径 - Frida 需要自定义
+## 这里要注意这里的签名不能和工程里面的 Embedded 相冲突。
+## 如果把FridaGadget设置成了embed&sign那么这里copy&sign就不需要做了。但是还是要有注入这一步。
+#mkdir -p "$TARGET_APP_PATH/Frameworks"
+#TARGET_FRIDA_PATH="$TARGET_APP_PATH/Frameworks/FridaGadget.dylib"
+#cp "$FRIDA_PATH" "$TARGET_FRIDA_PATH"
+#optool install -c load -p "@executable_path/Frameworks/FridaGadget.dylib" -t "$TARGET_APP_PATH/$APP_BINARY"
+#echo $executable_path
 
 #----------------------------------------
 # 7. 重签名第三方 FrameWorks
@@ -73,5 +79,22 @@ echo $FRAMEWORK
 done
 fi
 
+#----------------------------------------
+#todo list
+#- traverse dsym read uuid, build soft link to dsym cache. 4 bytes each
+#    FB53A898-119B-3272-A783-96626DAA26AD >>> FB53/A898/119B/3272/A78396626DAA26AD
+#- find value for key:DBGArchitecture,DBGBuildSourcePath,DBGSourcePath,DBGDSYMPath,DBGSourcePathRemapping,
+#- mkdir uuid.plist save DBGSourcePathRemapping DBGSourcePath .. & DBGVersion:3
+#----------------------------------------
+# 8. 索引dsym--索引到uuid分为五组的 dsym caches 中
+linksoft() {
+    mkdir targetDsymSoftPath
+    ln -s "originfile" "targetFile"
+}
+
 #清除数据
-rm -rf "${SRCROOT}/Temp"
+clearCaches() {
+    rm -rf "${SRCROOT}/Temp"
+}
+
+clearCaches
